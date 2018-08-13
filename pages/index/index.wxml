@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<scroll-view class='container'>
+  <view class='user' wx:for="{{person}}">
+    <view><text class='per-name'>{{item.name}}</text></view>
+    <input class='num' data-index='{{item.index}}' bindinput="inputMoney" type='number'></input>
+  </view>
+  <view class='user change-people'>
+  <button bindtap="addPerson" class='addPerson'>+</button>
+  <button bindtap="reducePerson" class='reducePerson'>-</button>
+  </view>
+  <view class='user'>
+    满
+    <input class='num' bindinput="changeWhen" type='number'></input>
+    减
+    <input class='num' bindinput="changeReduce" type='number'></input>
+  </view>
+
+  <view class='user'>
+  <checkbox-group bindchange="superPosed">
+  <label class="checkbox">
+    <checkbox value='{{superposed}}' />叠加满减
+  </label>
+  </checkbox-group>
+  </view>
+
+    <view class='user' wx:for="{{result}}">
+    <view><text class='per-name'>{{item}}</text></view>
+  </view>
+  <view class='user'>
+  <button class="caculate" bindtap="startCaculate">计算
+  </button>
+  </view>
+</scroll-view>
