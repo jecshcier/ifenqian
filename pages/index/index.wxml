@@ -11,14 +11,17 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view> -->
-<scroll-view class='container'>
-  <view class='user' wx:for="{{person}}">
+<view class='top'>
+  
+</view>
+<scroll-view class='container' scroll-y='true'>
+  <view class='user opt' wx:for="{{person}}">
     <view><text class='per-name'>{{item.name}}</text></view>
     <input class='num' data-index='{{item.index}}' bindinput="inputMoney" type='number'></input>
   </view>
   <view class='user change-people'>
-  <button bindtap="addPerson" class='addPerson'>+</button>
-  <button bindtap="reducePerson" class='reducePerson'>-</button>
+  <button bindtap="addPerson" class='addPerson'><text>+同伴</text></button>
+  <button bindtap="reducePerson" class='reducePerson'><text>-同伴</text></button>
   </view>
   <view class='user'>
     满

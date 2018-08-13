@@ -1,0 +1,8 @@
+<view>
+	<view class="tab" bindtap="caculate">
+<text>外卖拼单计算器</text>
+</view>
+<view class="tab">
+<text>线上购物计算器</text>
+</view>
+</view>

@@ -19,46 +19,72 @@
 .usermotto {
   margin-top: 200px;
 } */
-
+.container {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* position: absolute; */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: stretch;
+  justify-content: center;
+  padding-top:3vh;
+  box-sizing: border-box;
+  flex-grow:1;
+} 
 view,scroll-view{
   display: flex;
   font-size: 5vw;
 }
 .user{
-  /* flex-direction: column; */
-  width: 100%;
-  /* justify-content: flex-start; */
-  /* align-items: center; */
+  justify-content: center;
   padding: 5px;
+  width: 100%;
 }
 input.num{
   border: 1px solid #000;
   width: 80px;
   font-size: 5vw;
 }
-.user > view{
-  width: 150px;
+.opt > view{
+  width: 35vw;
+  display: flex;
+  justify-content: flex-end;
 }
 .caculate{
   width:30vw;
-  height:30vw;
-  border-radius:50%;
-  background:#52aef4;
+  /* height: 6vh; */
+  /* height:30vw; */
+  /* border-radius:50%; */
+  background:#82A6F5;
   display:flex;
   justify-content:center;
   align-items:center;
   color:#fff;
 }
+.top{
+  width: 100%;
+  height: 5vh;
+  background:#82A6F5;
+  flex-shrink: 0;
+}
 .change-people > button{
-  margin: 0;
-  padding:5 10px;
+  width: 25vw;
+  height: 6vh;
   line-height: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 5px;
+  background-color: #82A6F5;
+  color:#fff;
+  font-size: 5vw;
 }
 .change-people > button:nth-child(2){
-  margin-left: 5px;
+  background: #FF534D;
+}
+.change-people > button>text{
+  /* line-height: 3vh; */
 }
 .change-people{
   flex-grow: 0;

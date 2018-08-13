@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -15,6 +15,7 @@ App({
     // 获取用户信息
     wx.getSetting({
       success: res => {
+        console.log(res)
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
@@ -28,6 +29,10 @@ App({
                 this.userInfoReadyCallback(res)
               }
             }
+          })
+        } else {
+          wx.navigateTo({
+            url: '/pages/authority/authority?id=1'
           })
         }
       }
